@@ -1,0 +1,11 @@
+.home {
+  padding: 20px;
+  border-radius: 20px;
+
+  background: #ececf4;
+}
+
+.main-wrapper {
+  margin-left: 30px;
+  background: none;
+}

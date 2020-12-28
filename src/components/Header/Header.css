@@ -1,0 +1,13 @@
+.header {
+  background: white;
+  border-radius: 15px;
+  line-height: 0;
+  padding: 20px;
+  height: auto;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
