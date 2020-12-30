@@ -1,27 +1,51 @@
-import React from "react"
+import React, { useContext, useEffect } from "react"
 import "./Home.css"
 
-import { Layout } from "antd"
+import { Route, Switch } from "react-router-dom"
+import { Empty, Layout } from "antd"
+import { observer } from "mobx-react-lite"
+import { flowResult } from "mobx"
+
 import { Content } from "../../components/Content"
 import { HeaderComponent } from "../../components/Header/Header"
 import { Nav } from "../../components/Nav/Nav"
-import { Route, Switch } from "react-router-dom"
+import { StoreContext } from "../../App"
+import { RootStore } from "../../store/RootStore"
+import { Loader } from "../../components/Loader"
 
-export const Home = () => {
-  return (
-    <Layout className="home">
-      <Nav />
-      <Layout className="main-wrapper">
-        <HeaderComponent />
-        <Switch>
-          <Route path="/chats">
-            <Content />
-          </Route>
-          <Route path="/">
-            <div>Такой страницы еще не существует</div>
-          </Route>
-        </Switch>
+export const Home: React.FC = observer(
+  (): React.ReactElement => {
+    const { userStore } = useContext<RootStore>(StoreContext)
+
+    useEffect(() => {
+      const fetchData = async () => {
+        await flowResult(userStore.fetchUser())
+      }
+      fetchData()
+    }, [])
+
+    return (
+      <Layout className="home">
+        <Nav />
+        {userStore.userDataStatus === "LOADING" ? (
+          <Loader />
+        ) : (
+          <Layout className="main-wrapper">
+            <HeaderComponent />
+            <Switch>
+              <Route path="/chats">
+                <Content />
+              </Route>
+              <Route path="/">
+                <Empty
+                  style={{ marginTop: "5rem" }}
+                  description="Страница не существует"
+                />
+              </Route>
+            </Switch>
+          </Layout>
+        )}
       </Layout>
-    </Layout>
-  )
-}
+    )
+  }
+)

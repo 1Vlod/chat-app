@@ -18,9 +18,9 @@ const { Title } = Typography
 
 export const Nav = () => {
   //TODO: сделать выделение активной ссылки
-  //TODO: шрифт
   //TODO: стили в классы
   //TODO: переделать на лист
+
   return (
     <Sider width={260} className="nav-wrapper">
       <Title level={2} style={{ color: "white" }}>
@@ -39,23 +39,23 @@ export const Nav = () => {
         selectable={false}
       >
         <Menu.Item key="1" icon={<HomeOutlined style={{ fontSize: 20 }} />}>
-          <NavLink to="/home" className="nav__item">Главная</NavLink>
+          <NavLink to="/home" className="nav__item" activeStyle={{color: "red"}}>Главная</NavLink>
         </Menu.Item>
         <Menu.Item key="2" icon={<FileTextOutlined style={{ fontSize: 20 }} />}>
-          <NavLink to="/info" className="nav__item">Информация</NavLink>
+          <NavLink activeStyle={{color: "red"}} to="/info" className="nav__item">Информация</NavLink>
         </Menu.Item>
         <Menu.Item key="3" icon={<MessageOutlined style={{ fontSize: 20 }} />}>
-          <NavLink to="/chats" className="nav__item">Чаты</NavLink>
+          <NavLink activeStyle={{color: "red"}} to="/chats" className="nav__item">Чаты</NavLink>
         </Menu.Item>
         <Menu.Item key="4" icon={<CalendarOutlined style={{ fontSize: 20 }} />}>
-          <NavLink to="/calendar" className="nav__item">Календарь</NavLink>
+          <NavLink activeStyle={{color: "red"}} to="/calendar" className="nav__item">Календарь</NavLink>
         </Menu.Item>
         <Menu.Item
           key="5"
           icon={<QuestionCircleOutlined style={{ fontSize: 20 }} />}
           className="nav__item"
         >
-          <NavLink to="/about" className="nav__item">О приложении</NavLink>
+          <NavLink activeStyle={{color: "red"}} to="/about" className="nav__item">О приложении</NavLink>
         </Menu.Item>
       </Menu>
 

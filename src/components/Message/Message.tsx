@@ -1,47 +1,72 @@
-import React from "react"
+import React, { useContext } from "react"
 import "./Message.css"
+import parse from 'date-fns/parse'
+import format from 'date-fns/format'
 
 import { Typography, Card, Avatar, Button } from "antd"
 import { MoreOutlined } from "@ant-design/icons"
+import { StoreContext } from "../../App"
+import { RootStore } from "../../store/RootStore"
 
 const { Meta } = Card
 const { Paragraph, Text } = Typography
 
 interface MessagePropsInterface {
-  left: boolean
+  own: boolean
+  text: string
+  time: string
 }
 
-export const Message: React.FC<MessagePropsInterface> = ({left}: MessagePropsInterface): React.ReactElement => {
+// TODO
+// 1. Перенести операции со временем в отдельный файл
+
+export const Message: React.FC<MessagePropsInterface> = ({
+  own,
+  text,
+  time,
+}: MessagePropsInterface): React.ReactElement => {
+  const { dialogsStore, userStore } = useContext<RootStore>(StoreContext)
+
+  const result = parse(
+    time,
+    'yyyy/MM/dd/H/m',
+    new Date()
+  )
   return (
     <Card bordered={false} className="message">
       <Meta
-        className={`message__meta-${left ? "left" : "right"}`}
+        className={`message__meta-${own ? "right" : "left"}`}
         avatar={
           <Avatar
             shape="circle"
             size={30}
-            src="https://images.unsplash.com/photo-1609017879802-fd6e6fb563bd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            src={
+              own
+                ? userStore.userData.avatar
+                : dialogsStore.currentDialog?.avatar
+            }
           />
         }
         description={
           <>
             <Paragraph
-              className={`message__text-${left ? "left" : "right"}`}
+              className={`message__text-${own ? "right" : "left"}`}
               ellipsis={{ rows: 2, expandable: true }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-              veritatis veniam! Libero laboriosam maiores illo! g elit. Ut,
-              veritatis veniam! Libero laboriosam maiores illo! Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Ut, veritatis veniam!
-              Libero laboriosam maiores illo! g elit. Ut, veritatis veniam!
-              Libero laboriosam maiores illo! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Ut, veritatis veniam! Libero
-              laboriosam maiores illo! g elit. Ut, veritatis veniam! Libero
-              laboriosam maiores illo!
+              {text}
             </Paragraph>
-            <Text type="secondary" style={{marginLeft: `${left ? "" : "87%"}`}}>12:18</Text>
-            <Button type="text" shape="circle" className={`message__button-${left ? "left" : "right"}`}>
-              <MoreOutlined style={{transform: "rotateZ(90deg)"}}/>
+            <Text
+              type="secondary"
+              style={{ marginLeft: `${own ? "87%" : ""}` }}
+            >
+              {format(result, "HH:mm")}
+            </Text>
+            <Button
+              type="text"
+              shape="circle"
+              className={`message__button-${own ? "right" : "left"}`}
+            >
+              <MoreOutlined style={{ transform: "rotateZ(90deg)" }} />
             </Button>
           </>
         }

@@ -1,0 +1,19 @@
+.chats-list__wrapper {
+  padding: 29px 20px;
+  min-width: 40%;
+  border-right: 2px solid #e6f1f5;
+  position: relative;
+}
+
+.chats-list__input {
+  font-size: 20;
+  height: 40;
+  border-radius: 10;
+  background: white;
+}
+
+.chats-list__item {
+  margin-top: 10; 
+  border: none; 
+  padding: 0;
+}

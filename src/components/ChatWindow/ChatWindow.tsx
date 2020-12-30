@@ -1,39 +1,48 @@
-import React from 'react'
+import React, { useContext, useEffect } from "react"
+import "./ChatWindow.css"
 
-import { Input, Button } from 'antd'
+import { useParams } from "react-router-dom"
+import { observer } from "mobx-react-lite"
 
-import { Message } from '../Message/Message'
-import { useParams } from 'react-router-dom'
+import { StoreContext } from "../../App"
+import { RootStore } from "../../store/RootStore"
 
-export const ChatWindow = () => {
-  const { id } = useParams<{id: string}>()
+import { Loader } from "../Loader"
+import { ChatWindowInput } from "./ChatWindowInput"
+import { Message } from "../Message/Message"
 
-  return (
-    <div>
-        {id}
-        <div style={{height: "80%", overflowY: "auto" }}>
-          <Message left={false} />
-          <Message left={true} />
-          <Message left={false} />
-          <Message left={true} />
+export const ChatWindow: React.FC = observer(
+  (): React.ReactElement => {
+    const { id } = useParams<{ id: string }>()
+
+    const { messagesStore, dialogsStore, userStore } = useContext<RootStore>(StoreContext)
+    const { status, messagesList } = messagesStore
+
+    useEffect(() => {
+      dialogsStore.setCurrentDialog(id)
+      if (dialogsStore.currentDialog) {
+        messagesStore.fetchMessages(dialogsStore.currentDialog.linkMessages)
+      }
+    }, [dialogsStore.currentDialog, id])
+
+    return (
+      <div className="chat-window">
+        <div className="chat-window__messages">
+          {status === "NEVER" || status === "LOADING" ? (
+            <Loader />
+          ) : (
+            messagesList.map((item) => (
+              <Message
+                key={item.id}
+                own={item.author === userStore.userData._id}
+                text={item.text}
+                time={item.timestamp}
+              />
+            ))
+          )}
         </div>
-        <div
-          style={{
-            background: "white",
-            width: "90%",
-            borderRadius: 10,
-            padding: "20px 25px",
-            margin: "0 auto",
-            display: "flex",
-            boxShadow:" 0 0 10px rgba(0,0,0,0.2)"
-          }}
-        >
-          <Input
-            bordered={false}
-            placeholder="Write a message..."
-          />
-          <Button type="primary">Enter</Button>
-        </div>
+        <ChatWindowInput/>
       </div>
-  )
-}
+    )
+  }
+)

@@ -1,0 +1,216 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "_id": "5feb16cda3775f639897c836",
+      "avatar": "https://images.unsplash.com/photo-1608975321561-176c1b187d24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "name": "Mckee Burns",
+      "gender": "male",
+      "email": "mckeeburns@zizzle.com",
+      "info": "Ad anim sint ut sint velit ex officia nulla sint adipisicing officia. Excepteur proident amet incididunt pariatur ipsum laboris et deserunt irure pariatur. Deserunt magna esse officia in elit ipsum. Reprehenderit sit sunt elit elit sunt ullamco quis voluptate magna exercitation ullamco. Magna nisi non et est nulla fugiat nisi. Sit minim excepteur amet eiusmod. Deserunt consectetur irure eu fugiat mollit ex sint deserunt exercitation cupidatat.\r\n",
+      "login": "Patterson"
+    },
+    {
+      "id": "5feb16cd030ae5e2d493609c",
+      "_id": "5feb16cd030ae5e2d493609c",
+      "avatar": "https://images.unsplash.com/photo-1608975321561-176c1b187d24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "name": "Rich Sims",
+      "gender": "male",
+      "email": "richsims@zizzle.com",
+      "info": "Aliqua velit cupidatat ex in amet proident qui tempor. Tempor sit eiusmod aliqua sunt sit exercitation non labore. Anim ullamco dolore magna Lorem dolor incididunt quis consequat anim voluptate et. Elit aliquip ut culpa veniam. Irure enim dolore ea eu laborum officia id dolore reprehenderit ut voluptate.\r\n",
+      "login": "Henson",
+      "dialogs": [
+        {
+          "id": 0,
+          "name": "Maddox Morris"
+        },
+        {
+          "id": 1,
+          "name": "Sampson Gross"
+        },
+        {
+          "id": 2,
+          "name": "Mercedes Delaney"
+        }
+      ]
+    },
+    {
+      "id": "5feb16cde53fe3c3a0b6736a",
+      "_id": "5feb16cde53fe3c3a0b6736a",
+      "avatar": "https://images.unsplash.com/photo-1608975321561-176c1b187d24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "name": "Lelia Wilkinson",
+      "gender": "female",
+      "email": "leliawilkinson@zizzle.com",
+      "info": "Laborum est eu excepteur ipsum et Lorem Lorem fugiat nisi exercitation. Elit consequat eu aute ipsum ea id dolore sint excepteur commodo. Duis ullamco veniam eiusmod consequat sit in qui officia sunt fugiat.\r\n",
+      "login": "Shari",
+      "dialogs": [
+        {
+          "id": 0,
+          "name": "Finch Hancock"
+        },
+        {
+          "id": 1,
+          "name": "Bessie Edwards"
+        },
+        {
+          "id": 2,
+          "name": "Gamble Erickson"
+        }
+      ]
+    },
+    {
+      "id": "5feb16cdc579380236bb614a",
+      "_id": "5feb16cdc579380236bb614a",
+      "avatar": "https://images.unsplash.com/photo-1608975321561-176c1b187d24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "name": "Tara Bryan",
+      "gender": "female",
+      "email": "tarabryan@zizzle.com",
+      "info": "Ullamco tempor in commodo tempor nulla culpa. Culpa labore deserunt laborum fugiat cillum laboris esse anim fugiat. Ex magna eu laborum ea sit velit sit ex velit reprehenderit ullamco commodo deserunt.\r\n",
+      "login": "Lucia",
+      "dialogs": [
+        {
+          "id": 0,
+          "name": "Jeannine Carrillo"
+        },
+        {
+          "id": 1,
+          "name": "Head Huff"
+        },
+        {
+          "id": 2,
+          "name": "Pope Jacobs"
+        }
+      ]
+    },
+    {
+      "id": "5feb16cd42fc2eff578e3885",
+      "_id": "5feb16cd42fc2eff578e3885",
+      "avatar": "https://images.unsplash.com/photo-1608975321561-176c1b187d24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "name": "Jennifer Mccray",
+      "gender": "female",
+      "email": "jennifermccray@zizzle.com",
+      "info": "Sunt velit nostrud dolor incididunt commodo ipsum do eiusmod. Cupidatat sint occaecat duis anim. Officia ut velit cillum officia laboris ea sunt. Ad cillum velit ex Lorem dolore cupidatat commodo dolor elit labore fugiat elit mollit. Deserunt in magna incididunt tempor irure consectetur anim labore velit tempor irure reprehenderit. Occaecat sit velit elit excepteur quis non ex laboris aliqua excepteur. Sit commodo eu ad deserunt officia qui enim consequat consequat enim commodo sint exercitation veniam.\r\n",
+      "login": "Randall",
+      "dialogs": [
+        {
+          "id": 0,
+          "name": "Craft Tillman"
+        },
+        {
+          "id": 1,
+          "name": "Briana Bowen"
+        },
+        {
+          "id": 2,
+          "name": "Ella Sawyer"
+        }
+      ]
+    },
+    {
+      "_id": "5feb16cd6cdb3184e6694bc3",
+      "avatar": "https://images.unsplash.com/photo-1608975321561-176c1b187d24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "name": "Jacobson Hendrix",
+      "gender": "male",
+      "email": "jacobsonhendrix@zizzle.com",
+      "info": "Labore sunt minim Lorem qui cillum sunt consectetur ut exercitation ad. Aliqua anim quis cillum labore. Et nostrud elit non aliqua fugiat. In qui incididunt reprehenderit eu labore aliqua laboris. Eiusmod do adipisicing occaecat sunt dolore et.\r\n",
+      "login": "Susan",
+      "dialogs": [
+        {
+          "id": 0,
+          "name": "Cleveland Nieves"
+        },
+        {
+          "id": 1,
+          "name": "Jessica Joyner"
+        },
+        {
+          "id": 2,
+          "name": "Sofia Cardenas"
+        }
+      ]
+    }
+  ],
+  "dialogs": [
+    {
+      "id": "5feb16cda3775f639897c836",
+      "data": [
+        {
+          "linkMessages": "deidhoedj",
+          "id": "1",
+          "userId": "5feb16cd030ae5e2d493609c",
+          "name": "Josie Hester",
+          "unreadMessages": 5,
+          "avatar": "https://images.unsplash.com/photo-1609216690633-61604ac68559?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+          "lastMessage": "Ad anim sint ut sint velit ex officia nulla sint adipisicing officia. Excepteur proident amet incididunt pariatur ipsum laboris et deserunt irure pariatur. Deserunt magna esse officia in elit ipsum. Reprehenderit sit sunt elit elit sunt ullamco quis voluptate magna exercitation ullamco. Magna nisi non et est nulla fugiat nisi. Sit minim excepteur amet eiusmod. "
+        },
+        {
+          "linkMessages": "deidhoedj",
+          "id": "2",
+          "userId": "5feb16cde53fe3c3a0b6736a",
+          "avatar": "https://images.unsplash.com/photo-1609216690633-61604ac68559?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+          "name": "Deborah Flores",
+          "unreadMessages": 0,
+          "lastMessage": "Ad anim sint ut sint velit ex officia nulla sint adipisicing officia. Excepteur proident amet incididunt pariatur ipsum laboris et deserunt irure pariatur. Deserunt magna esse officia in elit ipsum. Reprehenderit sit sunt elit elit sunt ullamco quis voluptate magna exercitation ullamco. Magna nisi non et est nulla fugiat nisi. Sit minim excepteur amet eiusmod. "
+        },
+        {
+          "linkMessages": "deidhoedj",
+          "id": "3",
+          "userId": "5feb16cd42fc2eff578e3885",
+          "avatar": "https://images.unsplash.com/photo-1609216690633-61604ac68559?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+          "name": "Snow Gonzalez",
+          "unreadMessages": 1,
+          "lastMessage": "Ad anim sint ut sint velit ex officia nulla sint adipisicing officia. Excepteur proident amet incididunt pariatur ipsum laboris et deserunt irure pariatur. Deserunt magna esse officia in elit ipsum. Reprehenderit sit sunt elit elit sunt ullamco quis voluptate magna exercitation ullamco. Magna nisi non et est nulla fugiat nisi. Sit minim excepteur amet eiusmod. "
+        }
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "id": "deidhoedj",
+      "data": [
+        {
+          "id": "5febbd34dd3516b233a10875",
+          "_id": "5febbd34f9374843bdd45977",
+          "author": "5feb16cda3775f639897c836",
+          "text": "Est excepteur esse officia incididunt commodo elit anim duis aliquip est. Adipisicing consequat ut et ipsum sit cillum pariatur deserunt id dolor amet cupidatat esse. Lorem sit laboris do consequat velit do commodo ex est esse occaecat dolor. Eiusmod magna ad minim laborum cupidatat. Incididunt do cupidatat minim anim aute do exercitation aliqua ipsum est nulla ea officia ipsum. Duis minim incididunt proident non veniam aliqua eu occaecat velit pariatur.\r\n",
+          "timestamp": "2018/12/06/12/19"
+        },
+        {
+          "id": "5febbd341090d9de7d0b3173",
+          "_id": "5febbd343cbdf988566c4e6d",
+          "author": 71,
+          "text": "Proident magna amet est id cupidatat dolor adipisicing reprehenderit excepteur laboris cupidatat excepteur aute. Eiusmod Lorem est laboris nisi. Consectetur Lorem laboris consectetur veniam pariatur duis voluptate ut. Lorem veniam duis ad et eiusmod dolore do. Aute proident enim labore ipsum sint velit dolor Lorem consequat culpa minim. Cupidatat ea laborum voluptate do aliquip incididunt id cillum eiusmod reprehenderit nostrud cillum. Duis labore proident ex do.\r\n",
+          "timestamp": "2019/11/09/21/54"
+        },
+        {
+          "id": "5febbd3468658ec1aaa3d307",
+          "_id": "5febbd3473acfa6a6599e9a6",
+          "author": 17,
+          "text": "Amet reprehenderit minim non elit pariatur in consequat ut esse velit proident aute voluptate laborum. Exercitation sint sint pariatur laborum tempor consequat exercitation. Ea ad nisi sit cupidatat quis laborum nulla labore excepteur adipisicing proident minim dolore. Minim et sunt esse aliqua aliquip sint irure ut sint duis dolor ad. Tempor aliqua eiusmod enim deserunt labore minim velit consequat nostrud enim incididunt tempor id aute. Cupidatat ullamco ut nulla ex anim exercitation incididunt. Non eu sint adipisicing nisi esse magna enim tempor esse labore.\r\n",
+          "timestamp": "2014/03/24/15/59"
+        },
+        {
+          "id": "5febbd3487609da580df1f8f",
+          "_id": "5febbd345f653740bf301dfb",
+          "author": "5feb16cda3775f639897c836",
+          "text": "Amet velit sint veniam exercitation quis aliqua adipisicing nisi Lorem ad officia irure exercitation. Deserunt dolore do non dolor eiusmod Lorem magna voluptate. Incididunt minim esse sit esse consequat cupidatat non sit magna incididunt pariatur nulla deserunt consectetur.\r\n",
+          "timestamp": "2020/07/29/3/13"
+        },
+        {
+          "id": "5febbd3491012b5271ec756b",
+          "_id": "5febbd342dc894e978b2306c",
+          "author": 27,
+          "text": "Sunt officia anim consectetur nostrud id commodo et dolor. Ad ullamco esse mollit aliqua ipsum et. Ex adipisicing commodo consequat nulla ea irure. Anim ullamco laboris nostrud sunt cillum excepteur occaecat fugiat ullamco deserunt nulla excepteur dolor. Irure velit pariatur pariatur duis exercitation ut. Aute occaecat occaecat laborum fugiat. Occaecat ipsum sint duis pariatur ipsum nisi est tempor eiusmod culpa.\r\n",
+          "timestamp": "2018/02/04/16/06"
+        },
+        {
+          "id": "5febbd3401c7d3d66eb110b7",
+          "_id": "5febbd3443b5b1e56c6f7077",
+          "author": 71,
+          "text": "Eu duis commodo ea cupidatat occaecat cupidatat voluptate aliqua nisi. Cupidatat nostrud ex in ut sunt id laboris ad officia amet. Excepteur do nisi et culpa deserunt proident cupidatat sunt. Nisi est eu consectetur occaecat laboris velit ex labore. Ea adipisicing tempor aliqua anim dolore non.\r\n",
+          "timestamp": "2016/06/15/21/40"
+        }
+      ]
+    }
+  ]
+}

@@ -1,18 +1,23 @@
-import React from "react"
-
-import { Layout } from "antd"
-import "antd/dist/antd.css"
+import React, { createContext } from "react"
 import "./App.css"
 
+import "antd/dist/antd.css"
+import { Layout } from "antd"
+
 import { Home } from "./pages/Home/Home"
+import { RootStore } from "./store/RootStore"
+
+export const StoreContext = createContext<RootStore>({} as RootStore)
 
 function App() {
   return (
-    <Layout>
-      <Layout className="wrapper">
-        <Home />
+    <StoreContext.Provider value={new RootStore()}>
+      <Layout>
+        <Layout className="wrapper">
+          <Home />
+        </Layout>
       </Layout>
-    </Layout>
+    </StoreContext.Provider>
   )
 }
 
