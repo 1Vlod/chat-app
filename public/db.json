@@ -8,7 +8,8 @@
       "gender": "male",
       "email": "mckeeburns@zizzle.com",
       "info": "Ad anim sint ut sint velit ex officia nulla sint adipisicing officia. Excepteur proident amet incididunt pariatur ipsum laboris et deserunt irure pariatur. Deserunt magna esse officia in elit ipsum. Reprehenderit sit sunt elit elit sunt ullamco quis voluptate magna exercitation ullamco. Magna nisi non et est nulla fugiat nisi. Sit minim excepteur amet eiusmod. Deserunt consectetur irure eu fugiat mollit ex sint deserunt exercitation cupidatat.\r\n",
-      "login": "Patterson"
+      "login": "Patterson",
+      "dialogs": ["5feb16cd030ae5e2d493609c", "5feb16cde53fe3c3a0b6736a", "5feb16cdc579380236bb614a"]      
     },
     {
       "id": "5feb16cd030ae5e2d493609c",
@@ -211,6 +212,24 @@
           "timestamp": "2016/06/15/21/40"
         }
       ]
+    },
+    {
+      "text": "something",
+      "id": "VW6HF3p"
+    },
+    {
+      "text": "frfrfrgr",
+      "id": "0.5266808315655775",
+      "_id": "0.8843989111794921",
+      "author": "5feb16cda3775f639897c836",
+      "timestamp": "\"2020-12-30T23:45:34.437Z\""
+    },
+    {
+      "text": "Hello from my app!",
+      "id": "0.24962212145965612",
+      "_id": "0.9994794435931476",
+      "author": "5feb16cda3775f639897c836",
+      "timestamp": "\"2020-12-30T23:46:26.325Z\""
     }
   ]
 }

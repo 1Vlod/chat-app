@@ -6,18 +6,16 @@ import { SearchOutlined } from "@ant-design/icons"
 
 import { observer } from "mobx-react-lite"
 
-import { StoreContext } from "../../App"
 import { RootStore } from "../../store/RootStore"
 
 import { ChatsListItem } from "./ChatsListItem"
-
+import { StoreContext } from "../.."
 
 const { Title } = Typography
 
-
 export const ChatsList: React.FC = observer(
   (): React.ReactElement => {
-    const { dialogsStore } = useContext<RootStore>(StoreContext)
+    const { dialogsStore, userStore } = useContext<RootStore>(StoreContext)
     const { dialogsList } = dialogsStore
 
     return (
@@ -35,11 +33,9 @@ export const ChatsList: React.FC = observer(
         />
 
         <List
-          style={{ marginTop: 20, overflowY: "auto", height: "81%" }}
+          style={{ marginTop: 10, overflowY: "auto", height: "81%", paddingTop: 5 }}
           dataSource={dialogsList}
-          renderItem={(item) => (
-            <ChatsListItem item={item} />
-          )}
+          renderItem={(item) => <ChatsListItem item={item} ownId={userStore.userData._id}/>}
         />
       </div>
     )

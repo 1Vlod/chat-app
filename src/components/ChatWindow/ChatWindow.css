@@ -5,14 +5,19 @@
 .chat-window__messages {
   height: 80%;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat-window__input {
+  display: flex;
   background: white;
+
   width: 90%;
   border-radius: 10;
+  
+  box-shadow:  0 0 10px rgba(0,0,0,0.2);
+  
   padding: 20px 25px;
   margin: 0 auto;
-  display: flex;
-  box-shadow:  0 0 10px rgba(0,0,0,0.2);
 }

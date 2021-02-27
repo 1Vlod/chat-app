@@ -12,11 +12,12 @@ import {
   LogoutOutlined,
 } from "@ant-design/icons"
 import { NavLink } from "react-router-dom"
+import { observer } from "mobx-react-lite"
 
 const { Sider } = Layout
 const { Title } = Typography
 
-export const Nav = () => {
+export const Nav = observer(() => {
   //TODO: сделать выделение активной ссылки
   //TODO: стили в классы
   //TODO: переделать на лист
@@ -80,3 +81,4 @@ export const Nav = () => {
     </Sider>
   )
 }
+)

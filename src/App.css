@@ -8,3 +8,11 @@
   
   background-image: linear-gradient(90deg, #ea82fc, #82d5ff);
 }
+
+.app {
+  padding: 20px;
+  border-radius: 20px;
+  font-family: Roboto;
+
+  background: #ececf4;
+}

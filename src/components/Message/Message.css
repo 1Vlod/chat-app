@@ -1,3 +1,6 @@
+.message__wrapper {
+  position: relative;
+}
 .message {
   background: none;
 }
@@ -6,8 +9,8 @@
 .message__text-right {
   background: #779dfe;
   color: white;
-
   padding: 20px;
+  min-width: 30px;
   max-width: 80%;
 
   border-radius: 20px;
@@ -15,11 +18,14 @@
 
 .message__text-left {
   border-bottom-left-radius: 0;
+  margin-left: 5%;
+  margin-right: auto;
 }
 
 .message__text-right {
   border-bottom-right-radius: 0;
-  margin-left: 15%;
+  margin-left: auto;
+  margin-right: 5%;
 }
 
 .message__meta-left,

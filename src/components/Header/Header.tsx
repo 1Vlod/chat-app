@@ -14,9 +14,9 @@ import {
 import { BellOutlined } from "@ant-design/icons"
 
 import { Link, useLocation } from "react-router-dom"
-import { StoreContext } from "../../App"
 import { observer } from "mobx-react-lite"
 import { RootStore } from "../../store/RootStore"
+import { StoreContext } from "../.."
 
 const { Text } = Typography
 const { Header } = Layout
@@ -51,7 +51,7 @@ export const HeaderComponent: React.FC = observer(
                   <BellOutlined style={{ fontSize: 24 }} />
                 </Button>
               </Badge>
-              <Text>{userStore.userData.name}</Text>
+              <Text>{userStore.userData.fullname}</Text>
               <Avatar src={userStore.userData.avatar} size={40} />
             </div>
           </Col>

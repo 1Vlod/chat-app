@@ -4,10 +4,10 @@ import { Route } from "react-router-dom"
 import { observer } from "mobx-react-lite"
 import { ChatsList } from "./ChatsList/ChatsList"
 import { ChatWindow } from "./ChatWindow/ChatWindow"
-import { StoreContext } from "../App"
 import { RootStore } from "../store/RootStore"
 import { flowResult } from "mobx"
 import { Loader } from "./Loader"
+import { StoreContext } from ".."
 
 export const Chat: React.FC = observer(
   (): React.ReactElement => {

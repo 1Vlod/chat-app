@@ -4,12 +4,14 @@ import "./ChatWindow.css"
 import { useParams } from "react-router-dom"
 import { observer } from "mobx-react-lite"
 
-import { StoreContext } from "../../App"
 import { RootStore } from "../../store/RootStore"
 
 import { Loader } from "../Loader"
 import { ChatWindowInput } from "./ChatWindowInput"
 import { Message } from "../Message/Message"
+import { StoreContext } from "../.."
+
+// TODO: Разобраться со стилями для сообщения, т.к. при малом количестве текста, сообщение начинает колбасить 
 
 export const ChatWindow: React.FC = observer(
   (): React.ReactElement => {
@@ -18,12 +20,19 @@ export const ChatWindow: React.FC = observer(
     const { messagesStore, dialogsStore, userStore } = useContext<RootStore>(StoreContext)
     const { status, messagesList } = messagesStore
 
+    const getMessageAvatar = (id: string) => {
+      if (id === dialogsStore.userId) {
+        return userStore.getAvatar
+      }
+      return dialogsStore.dialogAvatar
+    }
+
     useEffect(() => {
       dialogsStore.setCurrentDialog(id)
       if (dialogsStore.currentDialog) {
-        messagesStore.fetchMessages(dialogsStore.currentDialog.linkMessages)
+        messagesStore.fetchMessages(id)
       }
-    }, [dialogsStore.currentDialog, id])
+    }, [id])
 
     return (
       <div className="chat-window">
@@ -33,10 +42,11 @@ export const ChatWindow: React.FC = observer(
           ) : (
             messagesList.map((item) => (
               <Message
-                key={item.id}
+                key={item._id}
                 own={item.author === userStore.userData._id}
                 text={item.text}
-                time={item.timestamp}
+                time={item.updatedAt}
+                avatar={getMessageAvatar(item.author)}
               />
             ))
           )}
