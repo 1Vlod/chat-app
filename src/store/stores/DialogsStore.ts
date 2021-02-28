@@ -31,7 +31,6 @@ export class DialogsStore {
   }
 
   setCurrentDialog(id: dialogInterface["_id"]) {
-    console.log(id)
     const dialog: dialogInterface | undefined = this.dialogsList.find(item => item._id === id)
     if (dialog) {
       this.currentDialog = dialog

@@ -1,5 +1,6 @@
-import { flow, makeObservable, observable } from "mobx"
+import { action, flow, makeObservable, observable } from "mobx"
 import { axios } from "../../core/axios"
+import { socket } from "../../core/socket"
 import { RootStore } from "../RootStore"
 import { statusLoadingType } from "../types"
 
@@ -31,6 +32,7 @@ export class MessagesStore {
       addMessageStatus: observable,
       fetchMessages: flow,
       addMessage: flow,
+      addMessageToList: action
     })
   }
 
@@ -49,11 +51,15 @@ export class MessagesStore {
     }
   }
 
+  addMessageToList(msg: messageInterface) {
+    this.messagesList.push(msg)
+  }
+
   *addMessage(text: string) {
     const message = {
       text,
       author: this.rootStore.userStore.userData._id,
-      dialog: this.rootStore.dialogsStore.currentDialog?._id
+      dialog: this.rootStore.dialogsStore.currentDialog?._id,
     }
 
     this.addMessageStatus = statusLoadingType.LOADING
@@ -61,6 +67,12 @@ export class MessagesStore {
       const data = yield axios.post(`/messages`, message)
       console.log(data)
       this.status = statusLoadingType.LOADED
+      const userID = message.author
+      socket.emit("msg", {
+        msg: data.data.data,
+        id: this.rootStore.dialogsStore.currentDialog?.members.find(elem => elem._id !== userID)?._id
+      })
+      this.addMessageToList(data.data.data)
     } catch (error) {
       console.log(error)
       this.addMessageStatus = statusLoadingType.ERROR

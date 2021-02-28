@@ -8,11 +8,12 @@ import App from "./App"
 import { RootStore } from "./store/RootStore"
 
 export const StoreContext = createContext<RootStore>({} as RootStore)
+export const store = new RootStore()
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <StoreContext.Provider value={new RootStore()}>
+      <StoreContext.Provider value={store}>
         <App />
       </StoreContext.Provider>
     </Router>

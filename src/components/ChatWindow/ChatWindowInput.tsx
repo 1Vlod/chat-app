@@ -4,12 +4,17 @@ import "./ChatWindow"
 import { Input, Button } from "antd"
 import { RootStore } from "../../store/RootStore"
 import { StoreContext } from "../.."
+import { socket } from "../../core/socket"
 
 const { TextArea } = Input
 
 export const ChatWindowInput = () => {
   const { messagesStore } = useContext<RootStore>(StoreContext)
   const [message, setMessage] = useState<string>("")
+
+  const sendMessage = () => {
+    messagesStore.addMessage(message)
+  }
 
   return (
     <div className="chat-window__input">
@@ -23,7 +28,7 @@ export const ChatWindowInput = () => {
       <Button 
         style={{ marginLeft: 10 }} 
         type="primary"
-        onClick={() => messagesStore.addMessage(message)}>
+        onClick={sendMessage}>
         Enter
       </Button>
     </div>
