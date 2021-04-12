@@ -1,7 +1,7 @@
 
 import { computed, flow, makeObservable, observable } from "mobx"
 import { axios } from "../../core/axios"
-import { socket } from "../../core/socket"
+import { socketInst } from "../../core/socket"
 import { RootStore } from "../RootStore"
 import { statusLoadingType } from "../types"
 
@@ -50,7 +50,7 @@ export class UserStore {
       const { data } = yield axios.get("/users/me")
       this.userDataStatus = statusLoadingType.LOADED
       this.userData = data.data
-      socket.emit("user online", {id: this.userData._id})
+      socketInst.socket.emit("user online", {id: this.userData._id})
     } catch (error) {
       console.log(error)
       this.userDataStatus = statusLoadingType.ERROR

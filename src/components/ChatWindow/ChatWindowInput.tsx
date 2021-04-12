@@ -4,7 +4,6 @@ import "./ChatWindow"
 import { Input, Button } from "antd"
 import { RootStore } from "../../store/RootStore"
 import { StoreContext } from "../.."
-import { socket } from "../../core/socket"
 
 const { TextArea } = Input
 

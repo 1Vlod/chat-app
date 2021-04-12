@@ -1,6 +1,6 @@
 import { action, flow, makeObservable, observable } from "mobx"
 import { axios } from "../../core/axios"
-import { socket } from "../../core/socket"
+import { socketInst } from "../../core/socket"
 import { RootStore } from "../RootStore"
 import { statusLoadingType } from "../types"
 
@@ -68,7 +68,7 @@ export class MessagesStore {
       console.log(data)
       this.status = statusLoadingType.LOADED
       const userID = message.author
-      socket.emit("msg", {
+      socketInst.socket.emit("msg", {
         msg: data.data.data,
         id: this.rootStore.dialogsStore.currentDialog?.members.find(elem => elem._id !== userID)?._id
       })
