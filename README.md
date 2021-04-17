@@ -1,6 +1,6 @@
 # Simple web chat
 
-Собираюсь сделать веб чат для практики различных технологий.
+Собираюсь сделать веб чат для практики различных технологий. \
 Backend repo: https://github.com/1Vlod/chat-app-backend
 
 ## Stack:
